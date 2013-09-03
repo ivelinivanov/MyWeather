@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <UIAlertViewDelegate>
+
+@property (strong, nonatomic) NSMutableArray *cities;
+
+- (IBAction)showMapView:(id)sender;
 
 @end

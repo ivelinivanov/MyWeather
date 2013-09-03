@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55151A47179836F100D70E51 /* CityWeatherWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 55151A46179836F100D70E51 /* CityWeatherWebService.m */; };
+		55151A4A1798434C00D70E51 /* WeatherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 55151A491798434C00D70E51 /* WeatherService.m */; };
+		551D40541796B42000985D12 /* WeatherIconOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 551D40531796B42000985D12 /* WeatherIconOverlay.m */; };
+		551D40571796B71F00985D12 /* WeatherIconOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 551D40561796B71F00985D12 /* WeatherIconOverlayView.m */; };
+		55636D131796DDF2001FEFF9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55636D121796DDF2001FEFF9 /* CoreLocation.framework */; };
+		55636D161796EA47001FEFF9 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55636D141796EA47001FEFF9 /* icon@2x.png */; };
+		55636D171796EA47001FEFF9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55636D151796EA47001FEFF9 /* icon.png */; };
+		559490261795AA0A00AD19E2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559490251795AA0A00AD19E2 /* MapKit.framework */; };
+		55D321DC17959E5100F6304B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D321DB17959E5100F6304B /* MapViewController.m */; };
 		55DA5CC917943D0900C33E74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DA5CC817943D0900C33E74 /* UIKit.framework */; };
 		55DA5CCB17943D0900C33E74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DA5CCA17943D0900C33E74 /* Foundation.framework */; };
 		55DA5CCD17943D0900C33E74 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DA5CCC17943D0900C33E74 /* CoreGraphics.framework */; };
@@ -22,6 +31,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55151A45179836F100D70E51 /* CityWeatherWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityWeatherWebService.h; sourceTree = "<group>"; };
+		55151A46179836F100D70E51 /* CityWeatherWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityWeatherWebService.m; sourceTree = "<group>"; };
+		55151A481798434C00D70E51 /* WeatherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherService.h; sourceTree = "<group>"; };
+		55151A491798434C00D70E51 /* WeatherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherService.m; sourceTree = "<group>"; };
+		55151A4B17984ACE00D70E51 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		551D40521796B42000985D12 /* WeatherIconOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherIconOverlay.h; sourceTree = "<group>"; };
+		551D40531796B42000985D12 /* WeatherIconOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherIconOverlay.m; sourceTree = "<group>"; };
+		551D40551796B71F00985D12 /* WeatherIconOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherIconOverlayView.h; sourceTree = "<group>"; };
+		551D40561796B71F00985D12 /* WeatherIconOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherIconOverlayView.m; sourceTree = "<group>"; };
+		55636D121796DDF2001FEFF9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		55636D141796EA47001FEFF9 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		55636D151796EA47001FEFF9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		559490251795AA0A00AD19E2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		55D321DA17959E5100F6304B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		55D321DB17959E5100F6304B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		55DA5CC417943D0900C33E74 /* MyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DA5CC817943D0900C33E74 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		55DA5CCA17943D0900C33E74 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55636D131796DDF2001FEFF9 /* CoreLocation.framework in Frameworks */,
+				559490261795AA0A00AD19E2 /* MapKit.framework in Frameworks */,
 				55DA5CC917943D0900C33E74 /* UIKit.framework in Frameworks */,
 				55DA5CCB17943D0900C33E74 /* Foundation.framework in Frameworks */,
 				55DA5CCD17943D0900C33E74 /* CoreGraphics.framework in Frameworks */,
@@ -56,11 +82,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55151A441798342D00D70E51 /* WeatherOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				551D40521796B42000985D12 /* WeatherIconOverlay.h */,
+				551D40531796B42000985D12 /* WeatherIconOverlay.m */,
+				551D40551796B71F00985D12 /* WeatherIconOverlayView.h */,
+				551D40561796B71F00985D12 /* WeatherIconOverlayView.m */,
+			);
+			name = WeatherOverlay;
+			sourceTree = "<group>";
+		};
+		55151A4C17984BFD00D70E51 /* WeatherWebService */ = {
+			isa = PBXGroup;
+			children = (
+				55151A481798434C00D70E51 /* WeatherService.h */,
+				55151A491798434C00D70E51 /* WeatherService.m */,
+				55151A45179836F100D70E51 /* CityWeatherWebService.h */,
+				55151A46179836F100D70E51 /* CityWeatherWebService.m */,
+			);
+			name = WeatherWebService;
+			sourceTree = "<group>";
+		};
 		55DA5CB917943D0900C33E74 = {
 			isa = PBXGroup;
 			children = (
 				55DA5CCE17943D0900C33E74 /* MyWeather */,
-				55DA5CC717943D0900C33E74 /* Frameworks */,
 				55DA5CC517943D0900C33E74 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,16 +123,20 @@
 		55DA5CC717943D0900C33E74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55636D121796DDF2001FEFF9 /* CoreLocation.framework */,
+				559490251795AA0A00AD19E2 /* MapKit.framework */,
 				55DA5CC817943D0900C33E74 /* UIKit.framework */,
 				55DA5CCA17943D0900C33E74 /* Foundation.framework */,
 				55DA5CCC17943D0900C33E74 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		55DA5CCE17943D0900C33E74 /* MyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				55151A4B17984ACE00D70E51 /* Constants.h */,
 				55DA5CD717943D0900C33E74 /* AppDelegate.h */,
 				55DA5CD817943D0900C33E74 /* AppDelegate.m */,
 				55DA5CE017943D0900C33E74 /* MainStoryboard.storyboard */,
@@ -93,7 +144,12 @@
 				55DA5CE417943D0900C33E74 /* MasterViewController.m */,
 				55DA5CE617943D0900C33E74 /* DetailViewController.h */,
 				55DA5CE717943D0900C33E74 /* DetailViewController.m */,
+				55D321DA17959E5100F6304B /* MapViewController.h */,
+				55D321DB17959E5100F6304B /* MapViewController.m */,
+				55151A4C17984BFD00D70E51 /* WeatherWebService */,
+				55151A441798342D00D70E51 /* WeatherOverlay */,
 				55DA5CCF17943D0900C33E74 /* Supporting Files */,
+				55DA5CC717943D0900C33E74 /* Frameworks */,
 			);
 			path = MyWeather;
 			sourceTree = "<group>";
@@ -101,6 +157,8 @@
 		55DA5CCF17943D0900C33E74 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				55636D141796EA47001FEFF9 /* icon@2x.png */,
+				55636D151796EA47001FEFF9 /* icon.png */,
 				55DA5CD017943D0900C33E74 /* MyWeather-Info.plist */,
 				55DA5CD117943D0900C33E74 /* InfoPlist.strings */,
 				55DA5CD417943D0900C33E74 /* main.m */,
@@ -168,6 +226,8 @@
 				55DA5CDD17943D0900C33E74 /* Default@2x.png in Resources */,
 				55DA5CDF17943D0900C33E74 /* Default-568h@2x.png in Resources */,
 				55DA5CE217943D0900C33E74 /* MainStoryboard.storyboard in Resources */,
+				55636D161796EA47001FEFF9 /* icon@2x.png in Resources */,
+				55636D171796EA47001FEFF9 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +242,11 @@
 				55DA5CD917943D0900C33E74 /* AppDelegate.m in Sources */,
 				55DA5CE517943D0900C33E74 /* MasterViewController.m in Sources */,
 				55DA5CE817943D0900C33E74 /* DetailViewController.m in Sources */,
+				55D321DC17959E5100F6304B /* MapViewController.m in Sources */,
+				551D40541796B42000985D12 /* WeatherIconOverlay.m in Sources */,
+				551D40571796B71F00985D12 /* WeatherIconOverlayView.m in Sources */,
+				55151A47179836F100D70E51 /* CityWeatherWebService.m in Sources */,
+				55151A4A1798434C00D70E51 /* WeatherService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +363,7 @@
 				55DA5CED17943D0900C33E74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

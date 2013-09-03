@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+#import "CityWeatherModel.h"
+#import "WeatherService.h"
+#import "Constants.h"
 
-@property (strong, nonatomic) id detailItem;
+@interface DetailViewController : UIViewController <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *degreeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *weatherIcon;
+@property (weak, nonatomic) IBOutlet UILabel *forecastLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
+
+@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) WeatherService *weatherService;
+
 @end

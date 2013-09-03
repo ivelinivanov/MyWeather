@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2524" systemVersion="12A217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1863"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -19,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--class Prefix:identifier Master View Controller - Master-->
+        <!--Master View Controller - Master-->
         <scene sceneID="18">
             <objects>
-                <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="MasterViewController" sceneMemberID="viewController">
+                <tableViewController title="Master" id="12" customClass="MasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,12 +37,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" lineBreakMode="tailTruncation" autoshrinkMode="none" baselineAdjustment="alignBaselines" text="Title" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -57,37 +59,133 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="36"/>
+                    <toolbarItems>
+                        <barButtonItem title="Map" id="6SU-ev-cwi">
+                            <connections>
+                                <segue destination="UY5-dX-Gso" kind="modal" identifier="mapSegue" modalTransitionStyle="partialCurl" id="d9X-wA-bKr"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Cities" id="36"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
-        <!--class Prefix:identifier Detail View Controller - Detail-->
+        <!--Map View Controller - Weather Map-->
+        <scene sceneID="cpL-7n-zF8">
+            <objects>
+                <viewController id="UY5-dX-Gso" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fpR-BM-gAz">
+                        <rect key="frame" x="0.0" y="20" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYs-hh-6NA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <connections>
+                                    <outlet property="delegate" destination="UY5-dX-Gso" id="Vok-Ag-zlg"/>
+                                </connections>
+                            </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4UE-7U-M3p">
+                                <rect key="frame" x="150" y="198" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4UE-7U-M3p" firstAttribute="centerX" secondItem="MYs-hh-6NA" secondAttribute="centerX" type="default" id="01s-VJ-eCf"/>
+                            <constraint firstItem="MYs-hh-6NA" firstAttribute="bottom" secondItem="fpR-BM-gAz" secondAttribute="bottom" type="default" id="13F-5K-17k"/>
+                            <constraint firstItem="4UE-7U-M3p" firstAttribute="centerY" secondItem="MYs-hh-6NA" secondAttribute="centerY" type="default" id="1IX-Zy-abL"/>
+                            <constraint firstItem="MYs-hh-6NA" firstAttribute="top" secondItem="fpR-BM-gAz" secondAttribute="top" type="default" id="GRZ-VY-zzK"/>
+                            <constraint firstItem="MYs-hh-6NA" firstAttribute="leading" secondItem="fpR-BM-gAz" secondAttribute="leading" type="default" id="TD6-fj-63a"/>
+                            <constraint firstItem="MYs-hh-6NA" firstAttribute="trailing" secondItem="fpR-BM-gAz" secondAttribute="trailing" type="default" id="a1k-Wc-ULp"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Weather Map" id="Ais-9j-aZl"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="4UE-7U-M3p" id="Nf5-Xp-vTE"/>
+                        <outlet property="mapView" destination="MYs-hh-6NA" id="NS8-cu-wcF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACY-x4-pZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="647"/>
+        </scene>
+        <!--Detail View Controller - Detail-->
         <scene sceneID="24">
             <objects>
-                <viewController storyboardIdentifier="" title="Detail" id="21" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController title="Detail" id="21" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="22">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" lineBreakMode="tailTruncation" autoshrinkMode="none" minimumFontSize="10" text="Detail view content goes here" textAlignment="center" id="27">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
+                                <rect key="frame" x="0.0" y="20" width="320" height="57"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="qvj-x0-1h5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="47"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aj-jZ-kJ0">
+                                <rect key="frame" x="0.0" y="161" width="320" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="V7a-uW-3lS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="jYw-vo-4u3">
+                                <rect key="frame" x="125" y="85" width="70" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="BGn-q6-ITo"/>
+                                    <constraint firstAttribute="height" constant="68" id="h0M-e0-sJn"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DHC-f3-uM9">
+                                <rect key="frame" x="150" y="174" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="6Kf-Xn-VQx">
+                                <rect key="frame" x="20" y="242" width="280" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="z7z-JD-MTl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="27" firstAttribute="centerY" secondItem="22" secondAttribute="centerY" type="default" id="7cE-gL-0wv"/>
-                            <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
-                            <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
+                            <constraint firstItem="DHC-f3-uM9" firstAttribute="centerX" secondItem="6aj-jZ-kJ0" secondAttribute="centerX" type="default" id="0Q0-UR-0hQ"/>
+                            <constraint firstItem="6aj-jZ-kJ0" firstAttribute="leading" secondItem="22" secondAttribute="leading" type="default" id="0fi-Y8-lw1"/>
+                            <constraint firstItem="DHC-f3-uM9" firstAttribute="top" secondItem="22" secondAttribute="top" constant="174" id="3PG-r0-YAb"/>
+                            <constraint firstItem="jYw-vo-4u3" firstAttribute="centerX" secondItem="DHC-f3-uM9" secondAttribute="centerX" type="default" id="5q7-uz-SHt"/>
+                            <constraint firstItem="jYw-vo-4u3" firstAttribute="top" secondItem="27" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BgC-LH-wKm"/>
+                            <constraint firstItem="27" firstAttribute="trailing" secondItem="22" secondAttribute="trailing" type="default" id="Tub-BN-9qX"/>
+                            <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" type="default" id="VQQ-Pc-kVD"/>
+                            <constraint firstAttribute="trailing" secondItem="6Kf-Xn-VQx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="a87-Db-sr8"/>
+                            <constraint firstItem="6Kf-Xn-VQx" firstAttribute="top" secondItem="6aj-jZ-kJ0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ogG-Jy-LU7"/>
+                            <constraint firstItem="6aj-jZ-kJ0" firstAttribute="trailing" secondItem="22" secondAttribute="trailing" type="default" id="pI5-9s-lLx"/>
+                            <constraint firstItem="6aj-jZ-kJ0" firstAttribute="top" secondItem="jYw-vo-4u3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pMo-3w-bUN"/>
+                            <constraint firstItem="6Kf-Xn-VQx" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rGZ-wv-f70"/>
+                            <constraint firstItem="27" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ufE-cy-Ioh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Weather" id="26"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="degreeLabel" destination="6aj-jZ-kJ0" id="lUf-F9-qY0"/>
                         <outlet property="detailDescriptionLabel" destination="27" id="28"/>
+                        <outlet property="forecastLabel" destination="6Kf-Xn-VQx" id="aSq-1v-RQd"/>
+                        <outlet property="loadingIndicator" destination="DHC-f3-uM9" id="soJ-EG-Lm4"/>
+                        <outlet property="weatherIcon" destination="jYw-vo-4u3" id="w50-KU-GgG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -98,6 +196,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
